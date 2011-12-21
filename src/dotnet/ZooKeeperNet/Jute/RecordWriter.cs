@@ -15,7 +15,7 @@
  *  limitations under the License.
  *
  */
-using ZooKeeperNet.IO;
+using MiscUtil.IO;
 
 namespace Org.Apache.Jute
 {

@@ -60,6 +60,9 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\lib\log4net.dll</HintPath>
     </Reference>
+    <Reference Include="MiscUtil">
+      <HintPath>..\lib\MiscUtil.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core">
       <RequiredTargetFramework>3.5</RequiredTargetFramework>
@@ -80,59 +83,170 @@
     <Compile Include="DataTree.cs" />
     <Compile Include="ClientConnectionEventConsumer.cs" />
     <Compile Include="EventType.cs" />
-    <Compile Include="Generated\ACL.cs" />
-    <Compile Include="Generated\AuthPacket.cs" />
-    <Compile Include="Generated\ConnectRequest.cs" />
-    <Compile Include="Generated\ConnectResponse.cs" />
-    <Compile Include="Generated\CreateRequest.cs" />
-    <Compile Include="Generated\CreateResponse.cs" />
-    <Compile Include="Generated\CreateSessionTxn.cs" />
-    <Compile Include="Generated\CreateTxn.cs" />
-    <Compile Include="Generated\DeleteRequest.cs" />
-    <Compile Include="Generated\DeleteTxn.cs" />
-    <Compile Include="Generated\ErrorTxn.cs" />
-    <Compile Include="Generated\ExistsRequest.cs" />
-    <Compile Include="Generated\ExistsResponse.cs" />
-    <Compile Include="Generated\FileHeader.cs" />
-    <Compile Include="Generated\GetACLRequest.cs" />
-    <Compile Include="Generated\GetACLResponse.cs" />
-    <Compile Include="Generated\GetChildren2Request.cs" />
-    <Compile Include="Generated\GetChildren2Response.cs" />
-    <Compile Include="Generated\GetChildrenRequest.cs" />
-    <Compile Include="Generated\GetChildrenResponse.cs" />
-    <Compile Include="Generated\GetDataRequest.cs" />
-    <Compile Include="Generated\GetDataResponse.cs" />
-    <Compile Include="Generated\GetMaxChildrenRequest.cs" />
-    <Compile Include="Generated\GetMaxChildrenResponse.cs" />
-    <Compile Include="Generated\Id.cs" />
-    <Compile Include="Generated\op_result_t.cs" />
-    <Compile Include="Generated\QuorumPacket.cs" />
-    <Compile Include="Generated\ReplyHeader.cs" />
-    <Compile Include="Generated\RequestHeader.cs" />
-    <Compile Include="Generated\SetACLRequest.cs" />
-    <Compile Include="Generated\SetACLResponse.cs" />
-    <Compile Include="Generated\SetACLTxn.cs" />
-    <Compile Include="Generated\SetDataRequest.cs" />
-    <Compile Include="Generated\SetDataResponse.cs" />
-    <Compile Include="Generated\SetDataTxn.cs" />
-    <Compile Include="Generated\SetMaxChildrenRequest.cs" />
-    <Compile Include="Generated\SetMaxChildrenTxn.cs" />
-    <Compile Include="Generated\SetWatches.cs" />
-    <Compile Include="Generated\Stat.cs" />
-    <Compile Include="Generated\StatPersisted.cs" />
-    <Compile Include="Generated\StatPersistedV1.cs" />
-    <Compile Include="Generated\SyncRequest.cs" />
-    <Compile Include="Generated\SyncResponse.cs" />
-    <Compile Include="Generated\TxnHeader.cs" />
-    <Compile Include="Generated\WatcherEvent.cs" />
+    <Compile Include="Generated\ACL.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Generated\AuthPacket.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Generated\CheckVersionRequest.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Generated\CheckVersionTxn.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Generated\ConnectRequest.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Generated\ConnectResponse.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Generated\CreateRequest.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Generated\CreateResponse.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Generated\CreateSessionTxn.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Generated\CreateTxn.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Generated\CreateTxnV0.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Generated\DeleteRequest.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Generated\DeleteTxn.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Generated\ErrorResponse.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Generated\ErrorTxn.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Generated\ExistsRequest.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Generated\ExistsResponse.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Generated\FileHeader.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Generated\GetACLRequest.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Generated\GetACLResponse.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Generated\GetChildren2Request.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Generated\GetChildren2Response.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Generated\GetChildrenRequest.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Generated\GetChildrenResponse.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Generated\GetDataRequest.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Generated\GetDataResponse.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Generated\GetMaxChildrenRequest.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Generated\GetMaxChildrenResponse.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Generated\GetSASLRequest.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Generated\Id.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Generated\LearnerInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Generated\MultiHeader.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Generated\MultiTxn.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Generated\QuorumPacket.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Generated\ReplyHeader.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Generated\RequestHeader.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Generated\SetACLRequest.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Generated\SetACLResponse.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Generated\SetACLTxn.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Generated\SetDataRequest.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Generated\SetDataResponse.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Generated\SetDataTxn.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Generated\SetMaxChildrenRequest.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Generated\SetMaxChildrenTxn.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Generated\SetSASLRequest.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Generated\SetSASLResponse.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Generated\SetWatches.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Generated\Stat.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Generated\StatPersisted.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Generated\SyncRequest.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Generated\SyncResponse.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Generated\Txn.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Generated\TxnHeader.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Generated\WatcherEvent.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="IClientConnection.cs" />
     <Compile Include="Ids.cs" />
-    <Compile Include="IO\BigEndianBitConverter.cs" />
-    <Compile Include="IO\EndianBinaryReader.cs" />
-    <Compile Include="IO\EndianBinaryWriter.cs" />
-    <Compile Include="IO\EndianBitConverter.cs" />
-    <Compile Include="IO\Endianness.cs" />
-    <Compile Include="IO\LittleEndianBitConverter.cs" />
     <Compile Include="IStartable.cs" />
     <Compile Include="IZooKeeper.cs" />
     <Compile Include="Jute\BinaryInputArchive.cs" />

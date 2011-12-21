@@ -1,5 +1,6 @@
 ﻿using System;
-using ZooKeeperNet.IO;
+using MiscUtil.Conversion;
+using MiscUtil.IO;
 
 namespace ZooKeeperNet
 {
@@ -471,7 +472,7 @@ namespace ZooKeeperNet
         private void ReadLength() 
         {
             lenBuffer = new byte[4];
-            using (EndianBinaryReader reader = new EndianBinaryReader(EndianBitConverter.Big, new MemoryStream(incomingBuffer), Encoding.UTF8))
+			using (MiscUtil.IO.EndianBinaryReader reader = new MiscUtil.IO.EndianBinaryReader(EndianBitConverter.Big, new MemoryStream(incomingBuffer), Encoding.UTF8))
             {
                 int len = reader.ReadInt32();
                 if (len < 0 || len >= ClientConnection.packetLen)
