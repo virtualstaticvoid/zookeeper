@@ -1,0 +1,13 @@
+# Building .Net Client
+
+Run `ant` to build all the C and Java dependencies. This includes the generated code (from the jute compilation).
+
+Open the `src/dotnet/ZooKeeperNet.sln` file in Visual Studio and build the entire solution.
+
+Run up the ZooKeeper server and execute the unit tests.
+
+
+  bin/zkServer.sh start-foreground
+
+
+
